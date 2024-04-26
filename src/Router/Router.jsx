@@ -6,11 +6,17 @@ import AddCraft from "../Pages/AddCraft";
 import AllArt from "../Pages/AllArt";
 import Registration from "../Pages/Registration";
 import Root from "../Layout/Root";
+import Home from "../Pages/Home";
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
         children : [
+            {
+                path : '/',
+                element :<Home></Home>
+
+            },
 
             {
                 path : '/login',
