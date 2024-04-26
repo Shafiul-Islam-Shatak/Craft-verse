@@ -65,14 +65,14 @@ const Login = () => {
                                         <label className="label" >
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="email" name="email" placeholder="email" className="input input-bordered text-base" required />
+                                        <input  type="email" name="email" placeholder="email" className="input input-bordered text-black" required />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text text-black">Password</span>
                                         </label>
                                         <div className="flex items-center">
-                                            <input type={showPassword ? 'password' : 'text'} name="password" placeholder="password" className="input input-bordered" required />
+                                            <input type={showPassword ? 'password' : 'text'} name="password" placeholder="password" className="input input-bordered text-black" required />
                                             {
                                                 showPassword ?
                                                     <IoEyeOffSharp onClick={() => { setShowPassword(!showPassword) }} className="-ml-7"></IoEyeOffSharp> :
@@ -84,7 +84,7 @@ const Login = () => {
                                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                         </label>
                                         <label className="label">
-                                            <p className="text-black">New here ? <Link to='/register' className="text-blue-800 font-semibold">Please Register</Link></p>
+                                            <p className="text-black">New here ? <Link to='/reg' className="text-blue-800 font-semibold">Please Register</Link></p>
                                         </label>
                                     </div>
                                     <div className="form-control mt-2">
