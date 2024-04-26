@@ -10,6 +10,7 @@ const AllArt = () => {
                     </title>
                 </Helmet>
                 <h3>this is home</h3>
+                
             </div>
         </div>
     );

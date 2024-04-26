@@ -39,7 +39,7 @@ const Banner = () => {
                        
                     </Swiper>
                             <div className="lg:pl-8 lg:w-1/2">
-                                <h1 className="text-5xl font-bold text-left animate__animated animate__fadeInBottomLeft">Where Creativity Meets Inspiration!</h1>
+                                <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-left animate__animated animate__fadeInBottomLeft">Where Creativity Meets Inspiration!</h1>
                                 <p className="py-6 text-left animate__animated animate__fadeInBottomRight">Explore a World of Artistic Expression and Imagination at Craft Verse! Discover Handcrafted Treasures, Unleash Your Creativity, and Find Inspiration for Every Crafty Endeavor.</p>
                             </div>
                         </div>
