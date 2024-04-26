@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet-async";
 
 const AddCraft = () => {
     return (
         <div>
-            <h3>add your craft</h3>
-        </div>
+            <Helmet>
+                <title>
+                    Craft Verse-Add Craft
+                </title>
+            </Helmet>        
+            </div>
     );
 };
 

@@ -1,10 +1,13 @@
-import Navbar from "../Components/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <h3>your home</h3>
+            <Helmet>
+                <title>
+                    Craft Verse-home
+                </title>
+            </Helmet>
         </div>
     );
 };

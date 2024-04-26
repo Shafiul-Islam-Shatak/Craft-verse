@@ -57,7 +57,7 @@ return (
     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://cdn.pixabay.com/photo/2020/11/18/03/31/house-5754236_960_720.jpg)' }}>
         <Helmet>
             <title>
-                Radiant Residence - Register
+                Craft Verse-Register
             </title>
         </Helmet>
         <div className="hero-overlay bg-opacity-60"></div>

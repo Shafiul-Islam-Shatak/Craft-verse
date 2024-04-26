@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 
 const MyArt = () => {
     return (
         <div>
-            <h3>Your all art</h3>
+            <Helmet>
+                <title>
+                    Craft Verse-My Art
+                </title>
+            </Helmet>
         </div>
     );
 };
