@@ -1,6 +1,11 @@
 import { Helmet } from "react-helmet-async";
+import { useLoaderData } from "react-router-dom";
+import CraftCard from "../Components/CraftCard";
 
 const AllArt = () => {
+    const arts = useLoaderData();
+    const { item_name } = arts;
+    console.log(item_name);
     return (
         <div>
             <div>
@@ -9,8 +14,15 @@ const AllArt = () => {
                         Craft Verse-All Art
                     </title>
                 </Helmet>
-                <h3>this is home</h3>
-                
+                <h3>ALL art {arts.length}</h3>
+                <div>
+                    {
+                        arts.map(art => <CraftCard
+                            key={art._id}
+                            art={art}
+                        ></CraftCard>)
+                    }
+                </div>
             </div>
         </div>
     );

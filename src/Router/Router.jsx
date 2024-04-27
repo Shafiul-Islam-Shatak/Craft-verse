@@ -11,28 +11,29 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
-        children : [
+        children: [
             {
-                path : '/',
-                element :<Home></Home>
+                path: '/',
+                element: <Home></Home>
 
             },
 
             {
-                path : '/login',
-                element :<Login></Login>,
+                path: '/login',
+                element: <Login></Login>,
             },
             {
-                path:'/reg',
-                element:<Registration></Registration>
+                path: '/reg',
+                element: <Registration></Registration>
             },
             {
-                path:'/add-craft',
+                path: '/add-craft',
                 element: <AddCraft></AddCraft>
             },
             {
-                path:'/all-art',
-                element :<AllArt></AllArt>
+                path: '/all-art',
+                element: <AllArt></AllArt>,
+                loader: () => fetch('http://localhost:7000/craft')
             }
         ]
 
@@ -41,4 +42,4 @@ const router = createBrowserRouter([
 ]);
 
 
-export default router ;
+export default router;
