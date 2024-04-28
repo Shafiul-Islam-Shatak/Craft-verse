@@ -7,7 +7,7 @@ import { MdAccessTime } from "react-icons/md";
 
 const CraftCard = ({ art }) => {
     // const crafts = useLoaderData();
-    const { item_name, sub_catagory, image, price, rating, time, customaization, stock, userName, userEmail, description } = art;
+    const { item_name, sub_catagory, image, price, rating, time, customaization, stock } = art;
 
 
     return (
@@ -19,9 +19,9 @@ const CraftCard = ({ art }) => {
                 </div>
             </figure>
             <div className="px-5 pt-3 pb-3">
-                <h2 className="card-title">{item_name}</h2>
-                <h2>Catagory : {sub_catagory}</h2>
-                <div className='flex items-center space-x-10'>
+                <h2 className="card-title mb-2">{item_name}</h2>
+                <h2 className='mb-2'>Catagory : {sub_catagory}</h2>
+                <div className='flex items-center space-x-10 mb-2'>
                     <div className='flex items-center'>
                         <BsCurrencyDollar></BsCurrencyDollar>
                         <h2>{price}</h2>
@@ -31,7 +31,7 @@ const CraftCard = ({ art }) => {
                         <h2>{rating}</h2>
                     </div>
                 </div>
-                <div className='flex items-center space-x-10'>
+                <div className='flex items-center space-x-10 mb-2'>
                     <div className='flex items-center'>
                         <MdAccessTime></MdAccessTime>
                         <h2>{time}</h2>
@@ -39,6 +39,12 @@ const CraftCard = ({ art }) => {
                     <div className='flex items-center'>
                         <h2>Availability :</h2>
                         <h2>- {stock}</h2>
+                    </div>
+                </div>
+                <div className='flex items-center space-x-10 mb-2'>
+                    <div className='flex items-center'>
+                        <h2>Customization :</h2>
+                        <h2>- {customaization}</h2>
                     </div>
                 </div>
                 <div className="card-actions ">
