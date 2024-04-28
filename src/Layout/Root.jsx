@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Footer from "../Components/Footer";
 
 const Root = () => {
     useEffect(() => {
@@ -17,6 +18,7 @@ const Root = () => {
             <ToastContainer></ToastContainer>
             <Navbar></Navbar>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };

@@ -40,7 +40,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-art',
-                element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>
+                element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>,
+                loader: () => fetch('http://localhost:7000/craft')
             }
         ]
 

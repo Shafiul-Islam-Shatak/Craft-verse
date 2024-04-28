@@ -20,7 +20,7 @@ const CraftCard = ({ art }) => {
             </figure>
             <div className="px-5 pt-3 pb-3">
                 <h2 className="card-title mb-2">{item_name}</h2>
-                <h2 className='mb-2'>Catagory : {sub_catagory}</h2>
+                <button className="btn btn-outline btn-success mb-2 rounded-3xl">Catagory : {sub_catagory}</button>
                 <div className='flex items-center space-x-10 mb-2'>
                     <div className='flex items-center'>
                         <BsCurrencyDollar></BsCurrencyDollar>
@@ -48,7 +48,7 @@ const CraftCard = ({ art }) => {
                     </div>
                 </div>
                 <div className="card-actions ">
-                    <button className="btn btn-block bg-[#C4A880]">View Details</button>
+                    <button className="btn btn-block bg-[#C4A880] bg-opacity-60">View Details</button>
                 </div>
             </div>
         </div>
