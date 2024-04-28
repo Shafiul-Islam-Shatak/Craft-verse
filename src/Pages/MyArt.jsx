@@ -9,7 +9,7 @@ const MyArt = () => {
                 </title>
             </Helmet>
 
-            
+        
         </div>
     );
 };

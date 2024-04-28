@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-art',
-                element : <MyArt></MyArt>
+                element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>
             }
         ]
 

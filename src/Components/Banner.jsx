@@ -33,9 +33,9 @@ const Banner = () => {
                                 <SwiperSlide><img className='rounded-2xl ' src="https://img.freepik.com/free-photo/painting-flowers-field_188544-8649.jpg?t=st=1714151961~exp=1714155561~hmac=85839fc85272c3c9c686d46f4b61978cb713aa1f9c656157df4276bf54e2951f&w=1060" alt="" /></SwiperSlide>
 
                             </Swiper>
-                            <div className="lg:pl-8 lg:w-1/2">
-                                <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-left animate__animated animate__fadeInBottomLeft">Where Creativity Meets Inspiration!</h1>
-                                <p className="py-6 text-left animate__animated animate__fadeInBottomRight">Explore a World of Artistic Expression and Imagination at Craft Verse! Discover Handcrafted Treasures, Unleash Your Creativity, and Find Inspiration for Every Crafty Endeavor.</p>
+                            <div className="lg:pl-8 lg:w-1/2 lg:mr-3">
+                                <h1 className="text-2xl md:text-5xl  font-bold text-left animate__animated animate__fadeInBottomLeft">Where Creativity Meets Inspiration!</h1>
+                                <p className="py-6 text-left animate__animated animate__fadeInBottomRight md:text-2xl">Explore a World of Artistic Expression and Imagination at Craft Verse! Discover Handcrafted Treasures, Unleash Your Creativity, and Find Inspiration for Every Crafty Endeavor.</p>
                             </div>
                         </div>
                         <div data-aos="fade-up">

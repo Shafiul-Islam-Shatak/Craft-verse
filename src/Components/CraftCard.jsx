@@ -11,7 +11,7 @@ const CraftCard = ({ art }) => {
 
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl mb-5">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5" data-aos="flip-left">
             <figure className="px-5 pt-5">
                 <div className='w-72 h-72 lg:h-80 lg:w-80'>
                     <img src={image} alt={item_name} className="rounded-xl mx-auto max-w-72 max-h-72" />

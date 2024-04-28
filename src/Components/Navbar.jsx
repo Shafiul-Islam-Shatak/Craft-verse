@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import 'animate.css';
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
+
 
 
 const Navbar = () => {
@@ -20,12 +23,14 @@ const Navbar = () => {
     const navlinks = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/all-art'>All Art</Link></li>
-        <li><Link to='/add-craft'>Add Craft</Link></li>
+        <li><Link to='/add-craft'>Add Art & Craft</Link></li>
+        <li><Link to='/my-art'>My Art & Craft</Link></li>
         <li><Link to='/reg'>Registration</Link></li>
 
     </>
     return (
         <div className="navbar bg-[#C4A880] bg-opacity-20 animate__animated animate__fadeInDown ">
+            <Tooltip id="profile"></Tooltip>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +52,7 @@ const Navbar = () => {
                     user &&
                     <div className="dropdown ">
                         <div tabIndex={0} role="button" className=" ">
-                            <img className="rounded-full max-w-10 tooltip tooltip-left" data-tip='your profile' src={user ? user.photoURL : ''} alt="" />
+                            <img className="rounded-full max-w-10 tooltip tooltip-left" data-tooltip-id='profile' data-tooltip-content={user.displayName} src={user ? user.photoURL : ''} alt="" />
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 absolute -translate-x-40 ">
                             <li><Link to='/profile'>{user.displayName }</Link></li>
