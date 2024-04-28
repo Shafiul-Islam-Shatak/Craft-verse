@@ -8,6 +8,7 @@ import Registration from "../Pages/Registration";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home";
 import MyArt from "../Pages/MyArt";
+import PrivateRoutes from "./PrivateRoutes";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/add-craft',
-                element: <AddCraft></AddCraft>
+                element: <PrivateRoutes><AddCraft></AddCraft></PrivateRoutes>
             },
             {
                 path: '/all-art',
