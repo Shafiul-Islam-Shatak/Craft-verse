@@ -4,6 +4,7 @@ import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import 'animate.css';
 
 
+
 // Import Swiper styles
 import 'swiper/css'
 // Import Swiper styles
@@ -13,9 +14,8 @@ const Banner = () => {
     return (
 
         <div className='-z-30 relative'>
-
             <div className=" min-h-screen" style={{ backgroundImage: 'url(https://wordpress.templatetrip.com/WCMTM01/WCMTM029_kraftiart/landing/assets/images/bg.jpg)' }}>
-                <div className=" text-center">
+                <div className=" text-center pt-10">
                     <div className=" min-h-screen bg-transparent">
                         <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
                             <Swiper className='w-80 md:w-[700px] lg:w-full mx-auto'
@@ -37,6 +37,10 @@ const Banner = () => {
                                 <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-left animate__animated animate__fadeInBottomLeft">Where Creativity Meets Inspiration!</h1>
                                 <p className="py-6 text-left animate__animated animate__fadeInBottomRight">Explore a World of Artistic Expression and Imagination at Craft Verse! Discover Handcrafted Treasures, Unleash Your Creativity, and Find Inspiration for Every Crafty Endeavor.</p>
                             </div>
+                        </div>
+                        <div data-aos="fade-up">
+                            <h2 className="text-[#B18B5E] font-bold text-6xl md:text-7xl lg:text-8xl  text-center mb-8 mt-10">100+</h2>
+                            <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl lg:pb-10 text-center">Stunning and impressive unique <br />Arts & Crafts</h2>
                         </div>
                     </div>
                 </div>

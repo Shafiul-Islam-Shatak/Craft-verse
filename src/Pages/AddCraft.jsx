@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
+import { AuthContext } from "../Provider/AuthProvider";
 // import 'sweetalert2/src/sweetalert2.scss'
 
 
 const AddCraft = () => {
+    const {user} = useContext(AuthContext)
     const hanldeAddCraft = e => {
         e.preventDefault();
         const form = e.target;
@@ -163,7 +166,7 @@ const AddCraft = () => {
                                     <span className="label-text">User Name</span>
                                 </label>
                                 <label className="input-group">
-                                    <input type="text" name="user_name" placeholder="User Name" className="input input-bordered w-full" />
+                                    <input type="text" name="user_name" defaultValue={user? user.displayName:''} placeholder="User Name" className="input input-bordered w-full" />
                                 </label>
                             </div>
                             <div className="form-control md:w-1/2 ml-4">
@@ -171,7 +174,7 @@ const AddCraft = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <label className="input-group">
-                                    <input type="email" name="email" placeholder="Email" className="input input-bordered w-full" />
+                                    <input type="email" name="email" defaultValue={user?user.email:''} placeholder="Email" className="input input-bordered w-full" />
                                 </label>
                             </div>
                         </div>
