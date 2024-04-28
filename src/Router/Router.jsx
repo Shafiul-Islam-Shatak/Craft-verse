@@ -7,6 +7,7 @@ import AllArt from "../Pages/AllArt";
 import Registration from "../Pages/Registration";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home";
+import MyArt from "../Pages/MyArt";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
                 path: '/all-art',
                 element: <AllArt></AllArt>,
                 loader: () => fetch('http://localhost:7000/craft')
+            },
+            {
+                path: '/my-art',
+                element : <MyArt></MyArt>
             }
         ]
 

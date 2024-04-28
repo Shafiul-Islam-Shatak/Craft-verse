@@ -10,7 +10,6 @@ const Home = () => {
                 </title>
             </Helmet>
             <Banner></Banner>
-         
         </div>
     );
 };

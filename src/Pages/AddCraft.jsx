@@ -50,91 +50,144 @@ const AddCraft = () => {
                     Craft Verse-Add Craft
                 </title>
             </Helmet>
-            <div className="bg[#F4F3F0]" >
+            <div className="bg-[#F8F5F0] bg-opacity-50 py-10" >
                 <div className="hero-overlay bg-opacity-60"></div>
                 <h2 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-5">Add Your Craft Here</h2>
-                <div className="w-3/4 mx-auto">
+                <div className="w-3/4 mx-auto my-10">
                     <form onSubmit={hanldeAddCraft}>
-                        <div className='space-y-3 lg:space-y-5'>
-
-                            <div className="lg:flex lg:justify-between lg:space-x-5 space-y-3 lg:space-y-0">
-                                <label className="input input-bordered grow flex items-center gap-2">
-                                    Craft Name :
-                                    <input type="text" name="item_name" className="grow" placeholder="Your Craft Name Here" />
+                        {/* row 1 */}
+                        <div className="md:flex mb-8">
+                            <div className="form-control md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text">Craft Name</span>
                                 </label>
-                                <label className="input input-bordered grow flex items-center gap-2">
-                                    Sub-Catagory :
-                                    <select name="catagory" className="grow">
-                                        <option value="">Not Selected</option>
-                                        <option value="Landscape Painting">Landscape Painting</option>
-                                        <option value="Portrait Drawing">Portrait Drawing</option>
-                                        <option value="Watercolour Painting">Watercolour Painting</option>
-                                        <option value="Oil Painting">Oil Painting</option>
-                                        <option value="Charcoal Sketching">Charcoal Sketching</option>
-                                        <option value="Cartoon Drawing">Cartoon Drawing</option>
-                                    </select>
+                                <label className="input-group">
+                                    <input type="text" name="item_name" placeholder="Craft Name" className="input input-bordered w-full" />
                                 </label>
                             </div>
-
-                            <div className="lg:flex lg:justify-between lg:space-x-5 space-y-3 lg:space-y-0">
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    Image :
-                                    <input type="url" name="photoURL" className="grow" placeholder="https://" />
+                            <div className="form-control md:w-1/2 ml-4">
+                                <label className="label">
+                                    <span className="label-text">Sub-Catagory</span>
                                 </label>
-                                <label className="input input-bordered grow flex items-center gap-2">
-                                    Price :
-                                    <input type="text" name="price" className="grow " placeholder="4000" />
-                                </label>
-
-                            </div>
-                            <div className="lg:flex lg:justify-between lg:space-x-5 space-y-3 lg:space-y-0">
-
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    Rating :
-                                    <input type="number" name="rating" className="grow" placeholder="Rate Your Craft" />
-                                </label>
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    Processing Time :
-                                    <input type="text" name="time" className="grow" placeholder="In weeks" />
+                                <label className="input-group">
+                                    <label className="input input-bordered grow flex items-center gap-2">
+                                        <select name="catagory" className="grow">
+                                            <option value="">Not Selected</option>
+                                            <option value="Landscape Painting">Landscape Painting</option>
+                                            <option value="Portrait Drawing">Portrait Drawing</option>
+                                            <option value="Watercolour Painting">Watercolour Painting</option>
+                                            <option value="Oil Painting">Oil Painting</option>
+                                            <option value="Charcoal Sketching">Charcoal Sketching</option>
+                                            <option value="Cartoon Drawing">Cartoon Drawing</option>
+                                        </select>
+                                    </label>
                                 </label>
                             </div>
-                            <div className="lg:flex lg:justify-between lg:space-x-5 space-y-3 lg:space-y-0 ">
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    Customization :
-                                    <select name="customaization" className="grow">
-                                        <option value="">Not Selected</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </label>
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    Stock Status :
-                                    <select name="stock" className="grow" >
-                                        <option value="">Not Selected</option>
-                                        <option value="Yes">In Stock</option>
-                                        <option value="No">Made in Order</option>
-                                    </select>
-                                </label>
-
-                            </div>
-                            <div className="lg:flex lg:justify-between lg:space-x-5 space-y-3 lg:space-y-0">
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    User Name :
-                                    <input type="text" name="user_name" className="grow" placeholder="Your Name Here" />
-                                </label>
-                                <label className="input input-bordered flex grow items-center gap-2">
-                                    User Email :
-                                    <input type="email" name="email" className="grow" placeholder="Your Email Here" />
-                                </label>
-                            </div>
-                            <label className="input input-bordered flex grow items-center gap-2">
-                                Description :
-                                <input type="text" name="description" className="grow" placeholder="Write a short description" />
-                            </label>
-
                         </div>
-                        <br />
-                        <input className="grow btn w-full bg-orange-300" type="submit" value="Add" />
+                        {/* row 2 */}
+                        <div className="md:flex mb-8">
+                            <div className="form-control md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text">Image</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="url" name="photoURL" placeholder="https://" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                            <div className="form-control md:w-1/2 ml-4">
+                                <label className="label">
+                                    <span className="label-text">Price</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="text" name="price" placeholder="price" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                        </div>
+
+                        {/* row 3 */}
+                        <div className="md:flex mb-8">
+                            <div className="form-control md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text">Rating</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="text" name="rating" placeholder="Rate your craft" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                            <div className="form-control md:w-1/2 ml-4">
+                                <label className="label">
+                                    <span className="label-text">Processing Time</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="text" name="time" placeholder="Processing time" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                        </div>
+                        {/* row 4 */}
+                        <div className="md:flex mb-8">
+                            <div className="form-control md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text">Stock</span>
+                                </label>
+                                <label className="input-group">
+                                    <label className="input input-bordered flex grow items-center gap-2">
+                                        Stock Status :
+                                        <select name="stock" className="grow" >
+                                            <option value="">Not Selected</option>
+                                            <option value="In stock">In Stock</option>
+                                            <option value="Made in order">Made in Order</option>
+                                        </select>
+                                    </label>
+                                </label>
+                            </div>
+                            <div className="form-control md:w-1/2 ml-4">
+                                <label className="label">
+                                    <span className="label-text">Customization</span>
+                                </label>
+                                <label className="input-group">
+                                    <label className="input input-bordered flex grow items-center gap-2">
+                                        <select name="customaization" className="grow">
+                                            <option value="">Not Selected</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </label>
+                                </label>
+                            </div>
+                        </div>
+
+                        {/* Row 5 */}
+                        <div className="md:flex mb-8">
+                            <div className="form-control md:w-1/2">
+                                <label className="label">
+                                    <span className="label-text">User Name</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="text" name="user_name" placeholder="User Name" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                            <div className="form-control md:w-1/2 ml-4">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="email" name="email" placeholder="Email" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                        </div>
+
+                        {/* row 6 */}
+                        <div className="mb-8">
+                            <div className="form-control w-full">
+                                <label className="label">
+                                    <span className="label-text">Description</span>
+                                </label>
+                                <label className="input-group">
+                                    <input type="text" name="description" placeholder="Photo URL" className="input input-bordered w-full" />
+                                </label>
+                            </div>
+                        </div>
+                        <input type="submit" value="Add Craft" className="btn btn-block bg-[#C4A880]" />
                     </form>
                 </div>
             </div>
