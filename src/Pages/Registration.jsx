@@ -54,7 +54,7 @@ const handleRegister = e => {
 }
 return (
 
-    <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://cdn.pixabay.com/photo/2020/11/18/03/31/house-5754236_960_720.jpg)' }}>
+    <div className="hero min-h-screen" >
         <Helmet>
             <title>
                 Craft Verse-Register

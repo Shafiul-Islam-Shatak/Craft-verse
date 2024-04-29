@@ -1,25 +1,23 @@
 import { Helmet } from "react-helmet-async";
-import { useLoaderData } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // import MyArtCard from "../Components/MyArtCard";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const MyArt = () => {
-    const arts = useLoaderData();
-    const [userArts, setUserArt] = useState([])
-    // console.log(userArts);
+    const [userArts , setUserArts] =useState([])
+    const { email } = useParams();
+    console.log(email);
     const { user } = useContext(AuthContext);
+    // console.log(email);
+    // console.log(loginEmail);
     useEffect(() => {
-        arts.forEach(art => {
+        fetch(`http://localhost:7000/craft/${user.email}`)
+        .then(res =>res.json())
+        .then(data=> setUserArts(data))
+    }, [user])
 
-            if (art.userEmail === user.email) {
-                console.log(art.userEmail);
-                setUserArt(art);
-                console.log(userArts);
-            }
 
-        });
-    }, []);
     return (
         <div>
             <Helmet>
@@ -28,8 +26,7 @@ const MyArt = () => {
                 </title>
             </Helmet>
             <div>
-                <h2>Your art :{userArts.length}</h2>
-               
+                <h2>Your art :{ userArts.length}</h2>
             </div>
 
 

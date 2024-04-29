@@ -40,8 +40,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/my-art',
-                element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>,
-                loader: () => fetch('http://localhost:7000/craft')
+                element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>
+                // loader: ({params}) => fetch(`http://localhost:7000/craft/${params.email}`)
             }
         ]
 

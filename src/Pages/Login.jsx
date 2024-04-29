@@ -52,7 +52,7 @@ const Login = () => {
                 </title>
             </Helmet>
 
-            <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/02/19/16/29/construction-1210677_1280.jpg)' }}>
+            <div className="hero min-h-screen">
 
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
