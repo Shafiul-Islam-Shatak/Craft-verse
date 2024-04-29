@@ -1,37 +1,103 @@
-import { useContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { AuthContext } from "../Provider/AuthProvider";
-import { useLoaderData } from "react-router-dom";
-const MyArtCard = () => {
-    const arts =useLoaderData();
-    // const {_id, userEmail} = art;
-    const [userArts, setUserArt] = useState([])
-    const { user} = useContext(AuthContext);
+import { BsCurrencyDollar } from "react-icons/bs";
+import { MdOutlineStarOutline } from "react-icons/md";
+import { MdAccessTime } from "react-icons/md";
+import { BiSolidMessageSquareEdit } from "react-icons/bi";
+import { MdDelete } from "react-icons/md";
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
+import Swal from "sweetalert2";
 
-    useEffect(() => {
-        // Check if the userEmail matches the user's email
-        // if (user && userEmail === user.email) {
-        //     // Check if the art with the same _id is not already in userArts
-        //     const newUserArt = [...userArts , art]
-        //     if (!userArts.find(item => item._id === _id)) {
-        //         setUserArt(newUserArt);
-        //     }
-        // }
-        arts.forEach(art => {
-            if (art.userEmail === user.email) {
-                    setUserArt(art)
-                }
+const MyArtCard = ({ userArt }) => {
+    const { _id, item_name, sub_catagory, image, price, rating, time, customaization, stock } = userArt;
+
+    const handleDelete = (_id) => {
+        console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:7000/craft/${_id}` ,{
+                    method:'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Craft has been deleted.",
+                                icon: "success"
+                            });
+
+                        }
+                    })
+            }
         });
-    }, []);
+
+    }
+
+
 
     return (
-        <div>
-            <h2>{userArts.length}</h2>
+
+        <div className="card w-96 bg-base-100 shadow-xl mb-5" data-aos="flip-left">
+            <Tooltip id="delete"></Tooltip>
+            <Tooltip id="edit"></Tooltip>
+            <figure className="px-5 pt-5">
+                <div className='w-72 h-72 lg:h-80 lg:w-80'>
+                    <img src={image} alt={item_name} className="rounded-xl mx-auto max-w-72 max-h-72" />
+
+                </div>
+            </figure>
+            <div className="px-5 pt-3 pb-3">
+                <h2 className="card-title mb-2">{item_name}</h2>
+                <button className="btn btn-outline btn-success mb-2 rounded-3xl">Catagory : {sub_catagory}</button>
+                <div className='flex items-center space-x-10 mb-2'>
+                    <div className='flex items-center'>
+                        <BsCurrencyDollar></BsCurrencyDollar>
+                        <h2>{price}</h2>
+                    </div>
+                    <div className='flex items-center'>
+                        <MdOutlineStarOutline></MdOutlineStarOutline>
+                        <h2>{rating}</h2>
+                    </div>
+                </div>
+                <div className='flex items-center space-x-10 mb-2'>
+                    <div className='flex items-center'>
+                        <MdAccessTime></MdAccessTime>
+                        <h2>{time}</h2>
+                    </div>
+                    <div className='flex items-center'>
+                        <h2>Availability :</h2>
+                        <h2>- {stock}</h2>
+                    </div>
+                </div>
+                <div className='flex items-center space-x-10 mb-2'>
+                    <div className='flex items-center'>
+                        <h2>Customization :</h2>
+                        <h2>- {customaization}</h2>
+                    </div>
+                </div>
+                <div className='flex justify-between mb-1'>
+                    <BiSolidMessageSquareEdit className='w-12 h-12 tooltip tooltip-left' data-tooltip-id='edit' data-tooltip-content='Upadte Craft'></BiSolidMessageSquareEdit>
+                    <MdDelete onClick={() => handleDelete(_id)} className='w-12 h-12 tooltip tooltip-left' data-tooltip-id='delete' data-tooltip-content='Delete Craft'></MdDelete>
+                </div>
+                <div className="card-actions ">
+                    <button className="btn btn-block bg-[#C4A880] bg-opacity-60">View Details</button>
+                </div>
+            </div>
         </div>
     );
 };
 MyArtCard.propTypes = {
-    art: PropTypes.object
+    userArt: PropTypes.object
 }
 
 
