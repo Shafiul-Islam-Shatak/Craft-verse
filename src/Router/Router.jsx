@@ -9,10 +9,13 @@ import Root from "../Layout/Root";
 import Home from "../Pages/Home";
 import MyArt from "../Pages/MyArt";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateCraft from "../Pages/UpdateCraft";
+import ErrorPage from "../Pages/ErrorPage";
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -42,6 +45,11 @@ const router = createBrowserRouter([
                 path: '/my-art',
                 element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>
                 // loader: ({params}) => fetch(`http://localhost:7000/craft/${params.email}`)
+            },
+            {
+                path:'/update-craft/:id',
+                element:<PrivateRoutes><UpdateCraft></UpdateCraft></PrivateRoutes>,
+                loader :({params})=>fetch(`http://localhost:7000/craft/${params.id}`)
             }
         ]
 

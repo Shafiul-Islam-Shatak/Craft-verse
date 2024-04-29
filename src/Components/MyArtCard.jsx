@@ -7,6 +7,7 @@ import { MdDelete } from "react-icons/md";
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import Swal from "sweetalert2";
+import { Link } from 'react-router-dom';
 
 const MyArtCard = ({ userArt }) => {
     const { _id, item_name, sub_catagory, image, price, rating, time, customaization, stock } = userArt;
@@ -23,8 +24,8 @@ const MyArtCard = ({ userArt }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:7000/craft/${_id}` ,{
-                    method:'DELETE'
+                fetch(`http://localhost:7000/craft/${_id}`, {
+                    method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
@@ -86,7 +87,9 @@ const MyArtCard = ({ userArt }) => {
                     </div>
                 </div>
                 <div className='flex justify-between mb-1'>
-                    <BiSolidMessageSquareEdit className='w-12 h-12 tooltip tooltip-left' data-tooltip-id='edit' data-tooltip-content='Upadte Craft'></BiSolidMessageSquareEdit>
+                    <Link to={`/update-craft/${_id}`}>
+                        <BiSolidMessageSquareEdit className='w-12 h-12 tooltip tooltip-left' data-tooltip-id='edit' data-tooltip-content='Upadte Craft'></BiSolidMessageSquareEdit>
+                    </Link>
                     <MdDelete onClick={() => handleDelete(_id)} className='w-12 h-12 tooltip tooltip-left' data-tooltip-id='delete' data-tooltip-content='Delete Craft'></MdDelete>
                 </div>
                 <div className="card-actions ">
