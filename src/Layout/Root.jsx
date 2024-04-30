@@ -4,8 +4,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import AOS from 'aos';
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import {  useEffect } from "react";
 import Footer from "../Components/Footer";
+import '../App.css';
+
 
 const Root = () => {
     useEffect(() => {

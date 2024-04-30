@@ -6,7 +6,6 @@ import { MdAccessTime } from "react-icons/md";
 
 
 const CraftCard = ({ art }) => {
-    // const crafts = useLoaderData();
     const { item_name, sub_catagory, image, price, rating, time, customaization, stock } = art;
 
 
