@@ -36,6 +36,8 @@ const MyArt = () => {
                     userArts.map(userArt => <MyArtCard
                     key={userArt._id}
                     userArt={userArt}
+                    userArts = {userArts}
+                    setUserArts ={setUserArts}
                     ></MyArtCard>)
                 }
 
