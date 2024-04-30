@@ -14,6 +14,7 @@ import 'swiper/css'
 // Import Swiper styles
 import 'swiper/css';
 import Review from "../Components/Review";
+import OurReviews from "../Components/OurReviews";
 
 const Home = () => {
     const arts = useLoaderData();
@@ -34,10 +35,12 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-3/4 mx-auto ">
                 {
-                    arts.map(art => <CraftCard
-                        key={art._id}
-                        art={art}
-                    ></CraftCard>)
+                    arts.slice(0, 6).map(art => (
+                        <CraftCard
+                            key={art._id}
+                            art={art}
+                        />
+                    ))
                 }
             </div>
 
@@ -165,8 +168,11 @@ const Home = () => {
 
             </div>
 
-            {/* Review section */}
+            {/*add Review section */}
             <Review></Review>
+            {/* view review */}
+            <OurReviews></OurReviews>
+
         </div>
     );
 };
