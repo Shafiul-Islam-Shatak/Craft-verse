@@ -33,7 +33,7 @@ const MyArtCard = ({ userArt }) => {
                     .then(data => {
                         console.log(data);
                         if (data.deletedCount > 0) {
-                            const reamaining = userArts.filter(art=> art._id !== _id)
+                            const reamaining = userArts.filter(art => art._id !== _id)
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your Craft has been deleted.",
@@ -97,7 +97,9 @@ const MyArtCard = ({ userArt }) => {
                     <MdDelete onClick={() => handleDelete(_id)} className='w-12 h-12 tooltip tooltip-left' data-tooltip-id='delete' data-tooltip-content='Delete Craft'></MdDelete>
                 </div>
                 <div className="card-actions ">
-                    <button className="btn btn-block bg-[#C4A880] bg-opacity-60">View Details</button>
+                    <Link to={`/craft-details/${_id}`} className='w-full'>
+                        <button className="btn w-full  bg-[#C4A880] bg-opacity-60">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

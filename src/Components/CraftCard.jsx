@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import { BsCurrencyDollar } from "react-icons/bs";
 import { MdOutlineStarOutline } from "react-icons/md";
 import { MdAccessTime } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
 const CraftCard = ({ art }) => {
-    const { item_name, sub_catagory, image, price, rating, time, customaization, stock } = art;
+    const { _id, item_name, sub_catagory, image, price, rating, time, customaization, stock } = art;
 
 
     return (
@@ -47,7 +48,9 @@ const CraftCard = ({ art }) => {
                     </div>
                 </div>
                 <div className="card-actions ">
-                    <button className="btn btn-block bg-[#C4A880] bg-opacity-60">View Details</button>
+                    <Link to={`/craft-details/${_id}`} className='w-full'>
+                        <button className="btn w-full  bg-[#C4A880] bg-opacity-60">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -11,6 +11,7 @@ import MyArt from "../Pages/MyArt";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateCraft from "../Pages/UpdateCraft";
 import ErrorPage from "../Pages/ErrorPage";
+import ArtDetails from "../Pages/ArtDetails";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -50,6 +51,11 @@ const router = createBrowserRouter([
                 path:'/update-craft/:id',
                 element:<PrivateRoutes><UpdateCraft></UpdateCraft></PrivateRoutes>,
                 loader :({params})=>fetch(`http://localhost:7000/craft-update/${params.id}`)
+            },
+            {
+                path:'/craft-details/:id',
+                element:<PrivateRoutes><ArtDetails></ArtDetails></PrivateRoutes>,
+                loader :({params})=>fetch(`http://localhost:7000/craft-details/${params.id}`)
             }
         ]
 
