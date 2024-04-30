@@ -12,14 +12,14 @@ import '../App.css';
 const Root = () => {
     useEffect(() => {
         AOS.init({
-          duration : 2000
+          duration : 1000
         });
       }, []);
     return (
         <div>
             <ToastContainer></ToastContainer>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Outlet ></Outlet>
             <Footer></Footer>
         </div>
     );

@@ -64,7 +64,7 @@ const UpdateCraft = () => {
                     <div className="w-3/4 mx-auto my-10">
                         <form onSubmit={hanldeUpdateCraft}>
                             {/* row 1 */}
-                            <div className="md:flex mb-8">
+                            <div className="md:flex md:mb-8 md-5">
                                 <div className="form-control md:w-1/2">
                                     <label className="label">
                                         <span className="label-text">Craft Name</span>
@@ -73,7 +73,7 @@ const UpdateCraft = () => {
                                         <input type="text" name="item_name" placeholder="Craft Name" defaultValue={item_name} className="input input-bordered w-full" />
                                     </label>
                                 </div>
-                                <div className="form-control md:w-1/2 ml-4">
+                                <div className="form-control md:w-1/2 md:ml-4">
                                     <label className="label">
                                         <span className="label-text">Sub-Catagory</span>
                                     </label>
@@ -93,7 +93,7 @@ const UpdateCraft = () => {
                                 </div>
                             </div>
                             {/* row 2 */}
-                            <div className="md:flex mb-8">
+                            <div className="md:flex md:mb-8 md-5">
                                 <div className="form-control md:w-1/2">
                                     <label className="label">
                                         <span className="label-text">Image</span>
@@ -102,7 +102,7 @@ const UpdateCraft = () => {
                                         <input type="url" name="photoURL" placeholder="https://" defaultValue={image} className="input input-bordered w-full" />
                                     </label>
                                 </div>
-                                <div className="form-control md:w-1/2 ml-4">
+                                <div className="form-control md:w-1/2 md:ml-4">
                                     <label className="label">
                                         <span className="label-text">Price</span>
                                     </label>
@@ -113,7 +113,7 @@ const UpdateCraft = () => {
                             </div>
 
                             {/* row 3 */}
-                            <div className="md:flex mb-8">
+                            <div className="md:flex md:mb-8 md-5">
                                 <div className="form-control md:w-1/2">
                                     <label className="label">
                                         <span className="label-text">Rating</span>
@@ -122,7 +122,7 @@ const UpdateCraft = () => {
                                         <input type="text" name="rating" placeholder="Rate your craft" defaultValue={rating} className="input input-bordered w-full" />
                                     </label>
                                 </div>
-                                <div className="form-control md:w-1/2 ml-4">
+                                <div className="form-control md:w-1/2 md:ml-4">
                                     <label className="label">
                                         <span className="label-text">Processing Time</span>
                                     </label>
@@ -132,7 +132,7 @@ const UpdateCraft = () => {
                                 </div>
                             </div>
                             {/* row 4 */}
-                            <div className="md:flex mb-8">
+                            <div className="md:flex md:mb-8 md-5">
                                 <div className="form-control md:w-1/2">
                                     <label className="label">
                                         <span className="label-text">Stock</span>
@@ -148,7 +148,7 @@ const UpdateCraft = () => {
                                         </label>
                                     </label>
                                 </div>
-                                <div className="form-control md:w-1/2 ml-4">
+                                <div className="form-control md:w-1/2 md:ml-4">
                                     <label className="label">
                                         <span className="label-text">Customization</span>
                                     </label>
@@ -165,7 +165,7 @@ const UpdateCraft = () => {
                             </div>
 
                             {/* Row 5 */}
-                            <div className="md:flex mb-8">
+                            <div className="md:flex md:mb-8 md-5">
                                 <div className="form-control md:w-1/2">
                                     <label className="label">
                                         <span className="label-text">User Name</span>
@@ -174,7 +174,7 @@ const UpdateCraft = () => {
                                         <input type="text" name="user_name" defaultValue={user ? user.displayName : ''} placeholder="User Name" className="input input-bordered w-full" />
                                     </label>
                                 </div>
-                                <div className="form-control md:w-1/2 ml-4">
+                                <div className="form-control md:w-1/2 md:ml-4">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
@@ -191,7 +191,7 @@ const UpdateCraft = () => {
                                         <span className="label-text">Description</span>
                                     </label>
                                     <label className="input-group">
-                                        <input type="text" defaultValue={description} name="description" placeholder="Photo URL" className="input input-bordered w-full" />
+                                        <input type="text" defaultValue={description} name="description" placeholder="Write a short description" className="input input-bordered w-full" />
                                     </label>
                                 </div>
                             </div>

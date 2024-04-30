@@ -26,7 +26,7 @@ const MyArt = () => {
                 </title>
             </Helmet>
             <div>
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" className='-z-30 relative'>
                     <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl  text-center mb-10 mt-10">My Arts & Crafts</h2>
                     <p className="text-lg px-3 md:w-3/4 mx-auto text-center mb-10 md:mt-10   mt-3">Discover exquisite handcrafted creations blending artistry and innovation. Each piece intricately designed to evoke emotion and inspire wonder. Explore the unique collection and bring a touch of creativity into your life.</p>
                 </div>

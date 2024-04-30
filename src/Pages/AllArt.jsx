@@ -7,7 +7,7 @@ const AllArt = () => {
     const { item_name } = arts;
     console.log(item_name);
     return (
-        <div>
+        <div >
             <div>
                 <Helmet>
                     <title>

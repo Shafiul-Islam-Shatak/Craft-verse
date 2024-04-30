@@ -13,6 +13,7 @@ import 'animate.css';
 import 'swiper/css'
 // Import Swiper styles
 import 'swiper/css';
+import Review from "../Components/Review";
 
 const Home = () => {
     const arts = useLoaderData();
@@ -23,7 +24,10 @@ const Home = () => {
                     Craft Verse - Home
                 </title>
             </Helmet>
+
             <Banner></Banner>
+
+            {/* craft section */}
             <div data-aos="fade-up">
                 <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl  text-center mb-10 mt-10">Our Collections</h2>
                 <p className="text-lg px-3 md:w-3/4 mx-auto text-center mb-10 md:mt-10   mt-3">Our art and craft collection is a testament to global creativity, showcasing diverse traditions and techniques. From vibrant textiles to sculpted ceramics, each piece tells a unique story of human ingenuity and cultural heritage. Explore our treasure trove of expression and immerse yourself in a world of beauty and craftsmanship.</p>
@@ -37,6 +41,8 @@ const Home = () => {
                 }
             </div>
 
+            {/* Catagory section */}
+
             <div>
                 <div>
                     <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl  text-center mb-10 mt-10">Our Categories</h2>
@@ -48,7 +54,7 @@ const Home = () => {
                         slidesPerView={1}
                         loop={true}
                         autoplay={{ delay: 4500 }}
-                        breakpoints={{ 
+                        breakpoints={{
                             1024: {
                                 slidesPerView: 3,
                             }
@@ -158,6 +164,9 @@ const Home = () => {
 
 
             </div>
+
+            {/* Review section */}
+            <Review></Review>
         </div>
     );
 };

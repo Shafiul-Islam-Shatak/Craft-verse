@@ -60,7 +60,7 @@ const Registration = () => {
     }
     return (
 
-        <div className="hero min-h-screen" >
+        <div className="hero min-h-screen " >
             <Helmet>
                 <title>
                     Craft Verse-Register

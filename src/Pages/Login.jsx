@@ -45,7 +45,7 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>
                     Radiant Residence - Login

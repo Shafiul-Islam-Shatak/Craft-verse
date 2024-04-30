@@ -8,10 +8,12 @@ import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import Swal from "sweetalert2";
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const MyArtCard = ({ userArt }) => {
     const { _id, item_name, sub_catagory, image, price, rating, time, customaization, stock } = userArt;
-
+    const [userArts, setUserArts] = useState(userArt);
+    console.log(userArts);
     const handleDelete = (_id) => {
         console.log(_id);
         Swal.fire({
@@ -31,11 +33,13 @@ const MyArtCard = ({ userArt }) => {
                     .then(data => {
                         console.log(data);
                         if (data.deletedCount > 0) {
+                            const reamaining = userArts.filter(art=> art._id !== _id)
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your Craft has been deleted.",
                                 icon: "success"
                             });
+                            setUserArts(reamaining)
 
                         }
                     })
@@ -48,7 +52,7 @@ const MyArtCard = ({ userArt }) => {
 
     return (
 
-        <div className="card w-96 bg-base-100 shadow-xl mb-5" data-aos="flip-left">
+        <div className="card w-96 bg-base-100 shadow-xl mb-5 " data-aos="flip-left">
             <Tooltip id="delete"></Tooltip>
             <Tooltip id="edit"></Tooltip>
             <figure className="px-5 pt-5">
