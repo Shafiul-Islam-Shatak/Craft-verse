@@ -8,7 +8,6 @@ import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import Swal from "sweetalert2";
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
 
 const MyArtCard = ({ userArt , userArts ,setUserArts}) => {
     const { _id, item_name, sub_catagory, image, price, rating, time, customaization, stock } = userArt;
