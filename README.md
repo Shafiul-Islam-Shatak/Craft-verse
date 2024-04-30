@@ -1,8 +1,7 @@
-# React + Vite
+Project Name : Craft-Verse
+Live Link : https://craft-verse.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features :
+1. You can log in with Email and pass , Google and Github
+2. You can add your craft and art after login. 
+3. You can update and delete your craft and arts from my craft & art page.
