@@ -26,7 +26,7 @@ const MyArtCard = ({ userArt }) => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:7000/craft/${_id}`, {
+                fetch(`https://craft-verse-server.vercel.app/craft/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

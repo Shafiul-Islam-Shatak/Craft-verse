@@ -25,7 +25,7 @@ const AddCraft = () => {
         console.log(craft);
 
         // post data to backend
-        fetch('http://localhost:7000/craft', {
+        fetch('https://craft-verse-server.vercel.app/craft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -28,7 +28,7 @@ const UpdateCraft = () => {
         console.log(updatedCraft);
 
         // put data to backend
-        fetch(`http://localhost:7000/craft-update/${_id}`, {
+        fetch(`https://craft-verse-server.vercel.app/craft-update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -11,7 +11,7 @@ const MyArt = () => {
     const { user } = useContext(AuthContext);
   
     useEffect(() => {
-        fetch(`http://localhost:7000/craft/${user.email}`)
+        fetch(`https://craft-verse-server.vercel.app/craft/${user.email}`)
         .then(res =>res.json())
         .then(data=> setUserArts(data))
     }, [user])

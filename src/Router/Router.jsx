@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader : ()=> fetch('http://localhost:7000/craft')
+                loader : ()=> fetch('https://craft-verse-server.vercel.app/craft')
 
             },
 
@@ -40,22 +40,21 @@ const router = createBrowserRouter([
             {
                 path: '/all-art',
                 element: <AllArt></AllArt>,
-                loader: () => fetch('http://localhost:7000/craft')
+                loader: () => fetch('https://craft-verse-server.vercel.app/craft')
             },
             {
                 path: '/my-art',
                 element : <PrivateRoutes><MyArt></MyArt></PrivateRoutes>
-                // loader: ({params}) => fetch(`http://localhost:7000/craft/${params.email}`)
             },
             {
                 path:'/update-craft/:id',
                 element:<PrivateRoutes><UpdateCraft></UpdateCraft></PrivateRoutes>,
-                loader :({params})=>fetch(`http://localhost:7000/craft-update/${params.id}`)
+                loader :({params})=>fetch(`https://craft-verse-server.vercel.app/craft-update/${params.id}`)
             },
             {
                 path:'/craft-details/:id',
                 element:<PrivateRoutes><ArtDetails></ArtDetails></PrivateRoutes>,
-                loader :({params})=>fetch(`http://localhost:7000/craft-details/${params.id}`)
+                loader :({params})=>fetch(`https://craft-verse-server.vercel.app/craft-details/${params.id}`)
             }
         ]
 
