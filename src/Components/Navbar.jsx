@@ -52,7 +52,7 @@ const Navbar = () => {
                     user &&
                     <div className="dropdown ">
                         <div tabIndex={0} role="button" className=" ">
-                            <img className="rounded-full max-w-10 tooltip tooltip-left" data-tooltip-id='profile' data-tooltip-content={user.displayName} src={user ? user.photoURL : ''} alt="" />
+                            <img className="rounded-full max-w-10 tooltip tooltip-left" data-tooltip-id='profile' data-tooltip-content={user?.displayName} src={user ? user.photoURL : ''} alt="" />
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52 absolute -translate-x-40 ">
                             <li><h1 onClick={handleLogOut} className="font-bold">Log Out</h1></li>

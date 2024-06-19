@@ -47,7 +47,7 @@ const Review = () => {
                                         <span className="label-text">Your Name</span>
                                     </label>
                                     <label className="input-group">
-                                        <input type="text" name="userName" placeholder="" defaultValue={user.displayName} required className="input input-bordered w-full " />
+                                        <input type="text" name="userName" placeholder="" defaultValue={user?.displayName} required className="input input-bordered w-full " />
                                     </label>
                                 </div>
                                 <div className="form-control ">

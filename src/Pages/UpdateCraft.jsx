@@ -171,7 +171,7 @@ const UpdateCraft = () => {
                                         <span className="label-text">User Name</span>
                                     </label>
                                     <label className="input-group">
-                                        <input type="text" name="user_name" defaultValue={user ? user.displayName : ''} placeholder="User Name" className="input input-bordered w-full" />
+                                        <input type="text" name="user_name" defaultValue={user ? user?.displayName : ''} placeholder="User Name" className="input input-bordered w-full" />
                                     </label>
                                 </div>
                                 <div className="form-control md:w-1/2 md:ml-4">
