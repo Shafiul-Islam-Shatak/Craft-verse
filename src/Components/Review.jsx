@@ -28,7 +28,7 @@ const Review = () => {
                 console.log(data);
                 if (data.insertedId) {
                     Swal.fire({
-                        title: "Review Added",
+                        title: "Thanks , Review Added",
                         icon: "success"
                     });
                     form.reset();
