@@ -11,10 +11,11 @@ import 'swiper/css'
 import 'swiper/css';
 
 const Banner = () => {
+
     return (
 
         <div className='-z-30 relative'>
-            <div className=" min-h-screen" style={{ backgroundImage: 'url(https://wordpress.templatetrip.com/WCMTM01/WCMTM029_kraftiart/landing/assets/images/bg.jpg)' }}>
+            <div className=" min-h-screen" >
                 <div className=" text-center pt-10">
                     <div className=" min-h-screen bg-transparent">
                         <div className="hero-content mx-auto flex-col lg:flex-row-reverse">

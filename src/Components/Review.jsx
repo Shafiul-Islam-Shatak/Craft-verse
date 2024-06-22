@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 
 const Review = () => {
     const { user } = useContext(AuthContext)
+
+
     const handleAddReview = e => {
         e.preventDefault();
         const form = e.target;
@@ -67,7 +69,7 @@ const Review = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn bg-[#C4A880]">Post</button>
+                                    <button className="btn bg-[#C4A880] dark:text-[#E1CFA6]">Post</button>
                                 </div>
                             </form>
                         </div>

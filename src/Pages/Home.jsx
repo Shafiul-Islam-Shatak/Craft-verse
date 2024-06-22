@@ -1,178 +1,122 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "../Components/Banner";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import CraftCard from "../Components/CraftCard";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/modules';
 import 'animate.css';
-
-
-
-// Import Swiper styles
-import 'swiper/css'
-// Import Swiper styles
 import 'swiper/css';
 import Review from "../Components/Review";
 import OurReviews from "../Components/OurReviews";
 
 const Home = () => {
     const arts = useLoaderData();
+
     return (
-        <div>
+        <div className="">
             <Helmet>
-                <title>
-                    Craft Verse - Home
-                </title>
+                <title> Craft Verse - Home </title>
             </Helmet>
-
-            <Banner></Banner>
-
-            {/* craft section */}
+            <Banner />
             <div data-aos="fade-up">
-                <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl  text-center mb-10 mt-10">Our Collections</h2>
-                <p className="text-lg px-3 md:w-3/4 mx-auto text-center mb-10 md:mt-10   mt-3">Our art and craft collection is a testament to global creativity, showcasing diverse traditions and techniques. From vibrant textiles to sculpted ceramics, each piece tells a unique story of human ingenuity and cultural heritage. Explore our treasure trove of expression and immerse yourself in a world of beauty and craftsmanship.</p>
+                <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl text-center mb-10 mt-10 dark:text-[#E1CFA6]">Our Collections</h2>
+                <p className="text-lg px-3 md:w-3/4 mx-auto text-center mb-10 md:mt-10 mt-3 dark:text-gray-300">Our art and craft collection is a testament to global creativity, showcasing diverse traditions and techniques. From vibrant textiles to sculpted ceramics, each piece tells a unique story of human ingenuity and cultural heritage. Explore our treasure trove of expression and immerse yourself in a world of beauty and craftsmanship.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-3/4 mx-auto ">
-                {
-                    arts.slice(0, 6).map(art => (
-                        <CraftCard
-                            key={art._id}
-                            art={art}
-                        />
-                    ))
-                }
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:w-3/4 mx-auto">
+                {arts.slice(0, 6).map(art => (
+                    <CraftCard key={art._id} art={art} />
+                ))}
             </div>
-
-            {/* Catagory section */}
-
             <div>
-                <div>
-                    <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl  text-center mb-10 mt-10">Our Categories</h2>
-                </div>
+                <h2 className="text-[#B18B5E] font-bold text-3xl md:text-5xl text-center mb-10 mt-10 dark:text-[#E1CFA6]">Our Categories</h2>
                 <div className="mx-auto mb-10">
-                    <Swiper className=' mx-auto'
+                    <Swiper
+                        className="mx-auto"
                         modules={[Navigation, Pagination, Scrollbar, Autoplay]}
                         spaceBetween={50}
-                        slidesPerView={1}
+                        lidesPerView={1}
                         loop={true}
                         autoplay={{ delay: 4500 }}
                         breakpoints={{
-                            1024: {
-                                slidesPerView: 3,
-                            }
-                        }}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
-                    >
-                        {/* slider 1 */}
+                            1024:
+                                { slidesPerView: 3, }
+                        }}>
                         <SwiperSlide className="mx-auto">
-                            <div>
-                                <div className="card mx-auto w-96 bg-base-100 shadow-xl image-full">
+                            <Link to='/landscape-cat'>
+                                <div className="card mx-auto w-80 h-80 bg-base-100 dark:bg-gray-800 shadow-xl image-full">
                                     <figure><img src="https://img.freepik.com/premium-photo/painting-sunset-ocean-generative-ai_87646-23137.jpg?w=1060" alt="Landscape Painting" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title"> Landscape Painting</h2>
-                                        <p>Landscape painting captures nature essence, evoking emotion through colors, forms, and atmospheric elements on canvas.</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn bg-[#C4A880] w-full">View Catagories</button>
-                                        </div>
+                                        <h2 className="card-title dark:text-white">Landscape Painting</h2>
+                                        <p className="dark:text-gray-300">Landscape painting captures the beauty of nature, from serene countryside scenes to dramatic seascapes, using color, light, and composition, reflecting our worlds beauty and diversity.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
-
-
-                        {/* slider 2 */}
                         <SwiperSlide className="mx-auto">
-                            <div>
-                                <div className="card mx-auto w-96 bg-base-100 shadow-xl image-full">
-                                    <figure><img src="https://img.freepik.com/free-photo/young-woman-tablet-device-tech-generative-ai_188544-19479.jpg?t=st=1714407081~exp=1714410681~hmac=5101505bd2a4fa67acd0930d6e493a2ec87f4776ddbe6e4ed41b89fec87e62aa&w=1060" alt="Landscape Painting" /></figure>
+                            <Link to='/Portrait-Drawing'>
+                                <div className="card mx-auto w-80 h-80 bg-base-100 dark:bg-gray-800 shadow-xl image-full">
+                                    <figure><img src="https://img.freepik.com/free-photo/smoking-girl-painting-ai-generated_268835-8290.jpg?t=st=1719064173~exp=1719067773~hmac=82e26bce6bc16571a41004f5d2fc74ac95a11493ef7e7c2784f032eb5d1639d0&w=996" alt="Landscape Painting" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Portrait Drawing</h2>
-                                        <p>Portrait painting captures essence, character, and emotion, immortalizing subjects in strokes of vivid artistry.</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn bg-[#C4A880] w-full">View Catagories</button>
-                                        </div>
+                                        <h2 className="card-title dark:text-white">Portrait-Drawing</h2>
+                                        <p className="dark:text-gray-300">Portrait-Drawing captures the beauty of nature, from serene countryside scenes to dramatic seascapes, using color, light, and composition, reflecting our worlds beauty and diversity.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
-
-
-                        {/* slider 3 */}
                         <SwiperSlide className="mx-auto">
-                            <div>
-                                <div className="card mx-auto w-96 bg-base-100 shadow-xl image-full">
-                                    <figure><img src="https://img.freepik.com/premium-photo/watercolor-illustration-change-seasons-winter-spring-summer-autumn-wide-banner-background-ai_93995-24013.jpg?w=1060" alt="Watercolor Painting" /></figure>
+                            <Link to='/Watercolour-Painting'>
+                                <div className="card mx-auto w-80 h-80 bg-base-100 dark:bg-gray-800 shadow-xl image-full">
+                                    <figure><img src="https://img.freepik.com/free-photo/watercolor-painting-with-multi-colored-abstract-backgrounds-generative-ai_188544-7811.jpg?t=st=1719064461~exp=1719068061~hmac=9b6d3b7ab8d28561ddd375c243e0a6e3c9310ec351ae765dd25ba506d4a5bd6d&w=900" alt="Landscape Painting" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Watercolor Painting</h2>
-                                        <p>Watercolor painting: fluid, vibrant, delicate strokes capturing ephemeral beauty, blending pigments in translucent layers.</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn bg-[#C4A880] w-full">View Catagories</button>
-                                        </div>
+                                        <h2 className="card-title dark:text-white">Watercolour Painting</h2>
+                                        <p className="dark:text-gray-300">Watercolour Painting captures the beauty of nature, from serene countryside scenes to dramatic seascapes, using color, light, and composition, reflecting our worlds beauty and diversity.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
-
-                        {/* slider 4 */}
                         <SwiperSlide className="mx-auto">
-                            <div>
-                                <div className="card mx-auto w-96 bg-base-100 shadow-xl image-full">
-                                    <figure><img src="https://img.freepik.com/free-photo/abstract-nature-painted-with-watercolor-autumn-leaves-backdrop-generated-by-ai_188544-9806.jpg?t=st=1714407555~exp=1714411155~hmac=5be630d669ed11db9f8d914da3913a3bc1aee8e13904739ac94f4abc4bcb7a8a&w=1060" alt="Oil Painting" /></figure>
+                            <Link to='/Oil-Painting'>
+                                <div className="card mx-auto w-80 h-80 bg-base-100 dark:bg-gray-800 shadow-xl image-full">
+                                    <figure><img src="https://img.freepik.com/free-photo/abstract-pattern-green-white-paint_23-2148078842.jpg?t=st=1719065153~exp=1719068753~hmac=0cc905fbad2007c5d029ea4107503ad163374f4d1a89faf4a8467fafcb77776e&w=1060" alt="Landscape Painting" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Oil Painting</h2>
-                                        <p>Oil painting: timeless art form, rich textures, vibrant colors, capturing moments with brushstrokes, evoking emotions.</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn bg-[#C4A880] w-full">View Catagories</button>
-                                        </div>
+                                        <h2 className="card-title dark:text-white">Oil Painting</h2>
+                                        <p className="dark:text-gray-300">Oil Painting captures the beauty of nature, from serene countryside scenes to dramatic seascapes, using color, light, and composition, reflecting our worlds beauty and diversity.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
-
-                        {/* slider 5 */}
                         <SwiperSlide className="mx-auto">
-                            <div>
-                                <div className="card mx-auto w-96 bg-base-100 shadow-xl image-full">
-                                    <figure><img src="https://img.freepik.com/premium-photo/cropped-image-person-drawing-paper_1048944-3280274.jpg?w=1060" alt="Oil Painting" /></figure>
+                            <Link to='/Charcoal-Sketching'>
+                                <div className="card mx-auto w-80 h-80 bg-base-100 dark:bg-gray-800 shadow-xl image-full">
+                                    <figure><img src="https://img.freepik.com/free-photo/monochrome-portrait-person-with-double-exposure_23-2149538623.jpg?t=st=1719065653~exp=1719069253~hmac=a8d5445c55032907a4b415ceb57b50b8f0d4ce4c5e44964fb868a7c29df66a46&w=740" alt="Landscape Painting" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Charcoal Sketching</h2>
-                                        <p>Expressive monochrome art, charcoal sketching captures depth, emotion, and detail with smudges and strokes.</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn bg-[#C4A880] w-full">View Catagories</button>
-                                        </div>
+                                        <h2 className="card-title dark:text-white">Charcoal Sketching</h2>
+                                        <p className="dark:text-gray-300">Charcoal Sketching captures the beauty of nature, from serene countryside scenes to dramatic seascapes, using color, light, and composition, reflecting our worlds beauty and diversity.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
-                        {/* slider 6 */}
                         <SwiperSlide className="mx-auto">
-                            <div>
-                                <div className="card mx-auto w-96 bg-base-100 shadow-xl image-full">
-                                    <figure><img src="https://img.freepik.com/premium-photo/small-cute-smile-monkey-coloring-page-kids-coloring-book-animals-drawing-line-art_712249-253.jpg?w=1060" alt="Oil Painting" /></figure>
+                            <Link to='/Cartoon-Drawing'>
+                                <div className="card mx-auto w-80 h-80 bg-base-100 dark:bg-gray-800 shadow-xl image-full">
+                                    <figure><img src="https://img.freepik.com/free-photo/little-fashion-girl-with-bag_71767-100.jpg?t=st=1719065589~exp=1719069189~hmac=cddcfe1bef499f7932be57fd6299c02aad3c542101e5b597568ba95b6fe17f93&w=740" alt="Landscape Painting" /></figure>
                                     <div className="card-body">
-                                        <h2 className="card-title">Cartoon Drawing</h2>
-                                        <p>Cartoon drawing: whimsical lines, vibrant colors, storytelling through exaggerated characters, bringing imagination to life.</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn bg-[#C4A880] w-full">View Catagories</button>
-                                        </div>
+                                        <h2 className="card-title dark:text-white">Cartoon Drawing</h2>
+                                        <p className="dark:text-gray-300">Cartoon Drawing captures the beauty of nature, from serene countryside scenes to dramatic seascapes, using color, light, and composition, reflecting our worlds beauty and diversity.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         </SwiperSlide>
-
+                        
                     </Swiper>
                 </div>
-
-
             </div>
-
-            {/*add Review section */}
-            <Review></Review>
-            {/* view review */}
-            <OurReviews></OurReviews>
-
+            <div data-aos="fade-up" className="bg-[#C4A880] bg-opacity-10 dark:bg-gray-700">
+                <OurReviews />
+            </div>
+            <div data-aos="fade-up">
+                <Review />
+            </div>
         </div>
     );
 };

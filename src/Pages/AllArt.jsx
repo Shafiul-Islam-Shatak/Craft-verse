@@ -4,8 +4,8 @@ import CraftCard from "../Components/CraftCard";
 
 const AllArt = () => {
     const arts = useLoaderData();
-    const { item_name } = arts;
-    console.log(item_name);
+    // const { item_name } = arts;
+    // console.log(item_name);
     return (
         <div >
             <div>
