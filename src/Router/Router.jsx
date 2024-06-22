@@ -51,32 +51,32 @@ const router = createBrowserRouter([
             {
                 path: '/landscape-cat',
                 element: <LandScapeCat></LandScapeCat>,
-                loader: () => fetch('http://localhost:7000/landscape-cat')
+                loader: () => fetch('https://craft-verse-server.vercel.app/landscape-cat')
             },
             {
                 path: '/Portrait-Drawing',
                 element: <PortraitDrawing></PortraitDrawing>,
-                loader: () => fetch('http://localhost:7000/Portrait-Drawing')
+                loader: () => fetch('https://craft-verse-server.vercel.app/Portrait-Drawing')
             },
             {
                 path: '/Watercolour-Painting',
                 element: <WatercolourPainting></WatercolourPainting>,
-                loader: () => fetch('http://localhost:7000/Watercolour-Painting')
+                loader: () => fetch('https://craft-verse-server.vercel.app/Watercolour-Painting')
             },
             {
                 path: '/Oil-Painting',
                 element: <OilPainting></OilPainting>,
-                loader: () => fetch('http://localhost:7000/Oil-Painting')
+                loader: () => fetch('https://craft-verse-server.vercel.app/Oil-Painting')
             },
             {
                 path: '/Charcoal-Sketching',
                 element: <CharcoalSketching></CharcoalSketching>,
-                loader: () => fetch('http://localhost:7000/Charcoal-Sketching')
+                loader: () => fetch('https://craft-verse-server.vercel.app/Charcoal-Sketching')
             },
             {
                 path: '/Cartoon-Drawing',
                 element: <CartoonDrawing></CartoonDrawing>,
-                loader: () => fetch('http://localhost:7000/Cartoon-Drawing')
+                loader: () => fetch('https://craft-verse-server.vercel.app/Cartoon-Drawing')
             },
             {
                 path: '/my-art',
