@@ -13,11 +13,11 @@ import UpdateCraft from "../Pages/UpdateCraft";
 import ErrorPage from "../Pages/ErrorPage";
 import ArtDetails from "../Pages/ArtDetails";
 import LandScapeCat from "../Pages/Categorys/LandScapeCat";
-import PortraitDrawing from "../Pages/Categorys/LandScapeCat";
-import WatercolourPainting from "../Pages/Categorys/LandScapeCat";
-import OilPainting from "../Pages/Categorys/LandScapeCat";
-import CharcoalSketching from "../Pages/Categorys/LandScapeCat";
-import CartoonDrawing from "../Pages/Categorys/LandScapeCat";
+import PortraitDrawing from "../Pages/Categorys/PortraitDrawing";
+import WatercolourPainting from "../Pages/Categorys/WatercolourPainting";
+import OilPainting from "../Pages/Categorys/OilPainting";
+import CharcoalSketching from "../Pages/Categorys/CharcoalSketching";
+import CartoonDrawing from "../Pages/Categorys/CartoonDrawing";
 const router = createBrowserRouter([
     {
         path: "/",
