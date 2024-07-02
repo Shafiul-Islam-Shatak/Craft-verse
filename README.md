@@ -9,7 +9,15 @@ Features :
 5. You can see all art from all art
 6. You can add a review .
 7. Dark and light mode for home page
-
+8. 
 Useage Package: 
 1. React Tooltip
 2. React Spinners
+
+   
+After Clone :
+1.install npm
+2.have to provide some keys. in .evn.local
+3.Please provide Firebase authentication key
+4.install others dependencies. you can find them from package.json file
+
